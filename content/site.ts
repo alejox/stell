@@ -306,19 +306,19 @@ export const spotlights: Spotlight[] = [
 /** Authorized distributors, keyed by id. Several of them cover more than one country. */
 export const distributors: Record<string, Distributor> = {
   oleadatvprocol: {
-    name: "OLEADATVPROCOL",
+    name: "OLEADATV-JUAN",
     phone: "+57 314 576 3378",
     whatsapp: "https://wa.me/573145763378",
     telegram: "https://t.me/oleadatvpro",
   },
   mgsprotv: {
-    name: "MGSPROTV",
+    name: "OLEADATV-RICARDO",
     phone: "+57 313 253 1929",
     whatsapp: "https://wa.me/573132531929",
     telegram: "https://t.me/magprotv",
   },
   mgsproCintia: {
-    name: "MGSPRO-CINTIA",
+    name: "OLEADATV-CINTIA",
     phone: "+57 311 352 3221",
     whatsapp: "https://wa.me/573113523221",
     telegram: "https://t.me/oleadatvpro",
