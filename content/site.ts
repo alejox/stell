@@ -83,8 +83,8 @@ export const brand = {
   tagline: "Televisión en vivo, películas y series en un solo lugar",
   description:
     "Stella TV reúne más de mil canales en vivo, +90 señales deportivas, películas, series y anime en una sola aplicación Android. Se compra por distribuidor autorizado y se activa el mismo día.",
-  logo: "/image/stella-tv.1edb4e2f.png",
-  logoCompact: "/image/logo.8c7d33ac.png",
+  logo: "/image/stella-tv-logo.png",
+  logoCompact: "/image/stella-tv-isotipo.png",
   legalName: "Stella TV",
 } as const;
 
@@ -116,10 +116,8 @@ export const seo = {
     "distribuidores stella tv",
     "canales en vivo",
   ],
-  /** 960x540 — above the 600x315 minimum for large social cards. */
-  ogImage: "/image/main-banner-bg.jpg",
-  ogImageWidth: 960,
-  ogImageHeight: 540,
+  /** Generated at build time by app/opengraph-image.tsx (1200x630 PNG). */
+  socialImage: "/opengraph-image",
 } as const;
 
 export const navLinks: NavLink[] = [
@@ -259,25 +257,25 @@ export const catalog: CatalogItem[] = [
     title: "Series y novelas",
     description:
       "Temporadas completas de estrenos y clásicos, con audio latino y subtitulado, ordenadas por género para que no pierdas tiempo buscando.",
-    image: "/image/flujo-tv-contenido-300x188.a2a92076.jpg",
+    image: "/image/stella-tv-series.svg",
   },
   {
     title: "Películas",
     description:
       "Catálogo bajo demanda que se actualiza con los estrenos recientes, además del cine que ya conoces, en HD y Full HD.",
-    image: "/image/flujo-tv-para-ninos-control-300x188.b96ae23f.jpg",
+    image: "/image/stella-tv-peliculas.svg",
   },
   {
     title: "Deportes en vivo",
     description:
       "Más de 90 señales deportivas de España y Latinoamérica: fútbol de liga, torneos internacionales, motor, boxeo y más.",
-    image: "/image/app-flujo-tv-descargar-300x188.c15ea7f2.jpg",
+    image: "/image/stella-tv-deportes.svg",
   },
   {
     title: "Infantil",
     description:
       "Una sección aparte con dibujos animados, series y películas para los más chicos, separada del resto del catálogo.",
-    image: "/image/foto-de-series-flujo-tv-300x188.be38f99f.jpg",
+    image: "/image/stella-tv-infantil.svg",
   },
 ];
 
@@ -287,21 +285,21 @@ export const spotlights: Spotlight[] = [
     title: "El partido, en vivo y sin recargas",
     description:
       "Las señales deportivas latinas y españolas están agrupadas en su propia categoría, con varias opciones por evento. Si una se satura, cambias a otra sin perder el partido.",
-    image: "/image/stellatv-app-gratis-para-celulares.184064c5.png",
+    image: "/image/stella-tv-deportes-en-vivo.svg",
   },
   {
     eyebrow: "Control parental",
     title: "Tú decides qué se ve en tu casa",
     description:
       "Los canales para adultos (+18) se bloquean con una clave que eliges al configurar la aplicación. Sin esa clave, esa categoría no aparece en el menú.",
-    image: "/image/aplicacion-flujo-tv.7df5cfc3.png",
+    image: "/image/stella-tv-control-parental.svg",
   },
   {
     eyebrow: "Multipantalla",
     title: "Hasta 4 dispositivos al mismo tiempo",
     description:
       "Una misma cuenta funciona en el televisor del living, el celular de la oficina y la tablet de los chicos a la vez. No hace falta que estén en la misma casa ni en la misma red.",
-    image: "/image/flujo-tv-apk-android.07056ab1.png",
+    image: "/image/stella-tv-multipantalla.svg",
   },
 ];
 

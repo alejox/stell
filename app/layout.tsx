@@ -42,20 +42,12 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: "/",
     siteName: brand.name,
-    images: [
-      {
-        url: seo.ogImage,
-        width: seo.ogImageWidth,
-        height: seo.ogImageHeight,
-        alt: `${brand.name} — ${brand.tagline}`,
-      },
-    ],
+    // The card image comes from app/opengraph-image.tsx automatically.
   },
   twitter: {
     card: "summary_large_image",
     title: seo.title,
     description: seo.description,
-    images: [seo.ogImage],
   },
 };
 

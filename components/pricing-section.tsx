@@ -74,7 +74,7 @@ export function PricingSection() {
     <section id="planes" className="relative isolate py-20 sm:py-28">
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[url(/image/fondo-flujo-tv.png)] bg-cover bg-center opacity-30"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(238,181,0,0.14)_0%,transparent_70%)]"
       />
       <div
         aria-hidden="true"

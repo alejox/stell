@@ -33,7 +33,7 @@ export function StructuredData() {
     inLanguage: "es",
     isPartOf: { "@id": `${siteUrl}/#website` },
     about: { "@id": `${siteUrl}/#organization` },
-    primaryImageOfPage: `${siteUrl}${seo.ogImage}`,
+    primaryImageOfPage: `${siteUrl}${seo.socialImage}`,
   };
 
   const prices = plans.map((plan) => Number(`${plan.price}.${plan.cents}`));
@@ -43,7 +43,7 @@ export function StructuredData() {
     "@id": `${siteUrl}/#product`,
     name: `Cuenta ${brand.name}`,
     description: seo.description,
-    image: `${siteUrl}${seo.ogImage}`,
+    image: `${siteUrl}${seo.socialImage}`,
     brand: { "@type": "Brand", name: brand.name },
     offers: {
       "@type": "AggregateOffer",

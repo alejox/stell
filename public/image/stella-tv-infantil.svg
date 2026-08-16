@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 376" width="600" height="376" role="img" aria-label="Sección infantil de Stella TV">
+  <defs>
+    <linearGradient id="kidsGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EEB500"/>
+      <stop offset="1" stop-color="#D62D08"/>
+    </linearGradient>
+    <linearGradient id="kidsGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".04"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="376" fill="#0B0B0C"/>
+  <circle cx="470" cy="70" r="150" fill="url(#kidsGold)" opacity=".12"/>
+
+  <!-- Tablet with a friendly face on screen -->
+  <rect x="150" y="70" width="300" height="220" rx="24" fill="#151517"/>
+  <rect x="166" y="86" width="268" height="188" rx="16" fill="url(#kidsGlass)"/>
+
+  <circle cx="256" cy="160" r="12" fill="#ffffff" opacity=".85"/>
+  <circle cx="344" cy="160" r="12" fill="#ffffff" opacity=".85"/>
+  <path d="M250 202c14 20 86 20 100 0" stroke="url(#kidsGold)" stroke-width="10" stroke-linecap="round" fill="none"/>
+
+  <!-- Floating shapes -->
+  <circle cx="110" cy="120" r="20" fill="url(#kidsGold)" opacity=".8"/>
+  <rect x="470" y="220" width="38" height="38" rx="10" fill="#ffffff" opacity=".18"/>
+  <path d="M112 268l20 34H92z" fill="#ffffff" opacity=".14"/>
+  <circle cx="502" cy="126" r="12" fill="#ffffff" opacity=".2"/>
+
+  <g font-family="system-ui, sans-serif" font-size="13" letter-spacing="2" fill="#ffffff" opacity=".5">
+    <text x="150" y="330">CATÁLOGO PARA LOS MÁS CHICOS</text>
+  </g>
+</svg>

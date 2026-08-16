@@ -7,7 +7,7 @@ export function SpotlightSection() {
     <section className="relative isolate py-20 sm:py-28">
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[url(/image/fondo-de-la-web-flujotv-black.png)] bg-cover bg-center opacity-40"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(70%_50%_at_100%_20%,rgba(214,45,8,0.16)_0%,transparent_65%),radial-gradient(60%_50%_at_0%_80%,rgba(238,181,0,0.12)_0%,transparent_60%)]"
       />
       <div
         aria-hidden="true"

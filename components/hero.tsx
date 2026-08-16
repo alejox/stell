@@ -5,14 +5,14 @@ import { CtaLink } from "@/components/ui/cta-link";
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden">
-      {/* Background photo plus overlays. Purely decorative. */}
+      {/* Layered gradients instead of a hero photo: nothing to download, nothing to push the LCP. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[url(/image/main-banner-bg.jpg)] bg-cover bg-center"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(120%_90%_at_50%_-10%,#241a05_0%,#0d0a06_45%,var(--color-background)_100%)]"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(0,0,0,0.7)_0%,rgba(0,0,0,0.85)_60%,var(--color-background)_100%)]"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,transparent_0%,rgba(0,0,0,0.55)_65%,var(--color-background)_100%)]"
       />
       <div
         aria-hidden="true"

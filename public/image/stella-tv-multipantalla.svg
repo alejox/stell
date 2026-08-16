@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 600" width="450" height="600" role="img" aria-label="Una cuenta de Stella TV en televisor, tablet y celular a la vez">
+  <defs>
+    <linearGradient id="multiGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EEB500"/>
+      <stop offset="1" stop-color="#D62D08"/>
+    </linearGradient>
+    <linearGradient id="multiGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".03"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="450" height="600" rx="24" fill="#0B0B0C"/>
+  <circle cx="225" cy="250" r="190" fill="url(#multiGold)" opacity=".1"/>
+
+  <!-- Television -->
+  <rect x="45" y="90" width="360" height="212" rx="16" fill="#151517"/>
+  <rect x="59" y="104" width="332" height="184" rx="10" fill="url(#multiGlass)"/>
+  <circle cx="225" cy="196" r="30" fill="#0B0B0C" opacity=".45"/>
+  <path d="M215 182l24 14-24 14z" fill="#ffffff"/>
+  <rect x="195" y="302" width="60" height="14" rx="4" fill="#151517"/>
+  <rect x="145" y="316" width="160" height="10" rx="5" fill="#151517"/>
+
+  <!-- Tablet -->
+  <rect x="52" y="366" width="200" height="150" rx="16" fill="#151517"/>
+  <rect x="64" y="378" width="176" height="126" rx="10" fill="url(#multiGlass)"/>
+  <circle cx="152" cy="441" r="20" fill="#0B0B0C" opacity=".4"/>
+  <path d="M145 432l16 9-16 9z" fill="#ffffff"/>
+
+  <!-- Phone -->
+  <rect x="286" y="352" width="112" height="200" rx="20" fill="#151517"/>
+  <rect x="296" y="362" width="92" height="180" rx="14" fill="url(#multiGlass)"/>
+  <circle cx="342" cy="452" r="18" fill="#0B0B0C" opacity=".4"/>
+  <path d="M336 444l14 8-14 8z" fill="#ffffff"/>
+
+  <!-- Simultaneous streams counter -->
+  <g>
+    <rect x="52" y="534" width="200" height="42" rx="12" fill="#151517"/>
+    <circle cx="76" cy="555" r="7" fill="url(#multiGold)"/>
+    <text x="94" y="560" font-family="system-ui, sans-serif" font-size="14" fill="#ffffff" opacity=".6">4 pantallas activas</text>
+  </g>
+</svg>

@@ -17,10 +17,10 @@ export function FaqSection() {
           />
 
           <Image
-            src="/image/dudas-magis-tv.81befdbc.png"
-            alt="Preguntas frecuentes sobre Stella TV"
-            width={578}
-            height={699}
+            src="/image/stella-tv-preguntas-frecuentes.svg"
+            alt="Consultas frecuentes sobre Stella TV respondidas por chat"
+            width={520}
+            height={620}
             sizes="(min-width: 1024px) 24rem, 60vw"
             className="mx-auto h-auto w-3/5 max-w-sm lg:mx-0 lg:w-full"
           />

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ShieldCheck, TrendingUp, Smartphone, Users, Headset } from "lucide-react";
-import { brand, seo, siteUrl } from "@/content/site";
+import { brand, siteUrl } from "@/content/site";
 
 const resellerTitle = "Conviértete en revendedor de Stella TV";
 const resellerDescription =
@@ -32,20 +32,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     siteName: brand.name,
-    images: [
-      {
-        url: seo.ogImage,
-        width: seo.ogImageWidth,
-        height: seo.ogImageHeight,
-        alt: resellerTitle,
-      },
-    ],
+    // Inherits the generated card from app/opengraph-image.tsx.
   },
   twitter: {
     card: "summary_large_image",
     title: `${resellerTitle} | ${brand.name}`,
     description: resellerMetaDescription,
-    images: [seo.ogImage],
   },
 };
 

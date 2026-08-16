@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 600" width="450" height="600" role="img" aria-label="Partido en vivo en un televisor con Stella TV">
+  <defs>
+    <linearGradient id="liveGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EEB500"/>
+      <stop offset="1" stop-color="#D62D08"/>
+    </linearGradient>
+    <linearGradient id="liveScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EEB500" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#0B0B0C" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="450" height="600" rx="24" fill="#0B0B0C"/>
+  <circle cx="225" cy="180" r="190" fill="url(#liveGold)" opacity=".1"/>
+
+  <!-- Television -->
+  <rect x="45" y="120" width="360" height="220" rx="16" fill="#151517"/>
+  <rect x="59" y="134" width="332" height="192" rx="10" fill="#0E0E10"/>
+  <rect x="59" y="134" width="332" height="192" rx="10" fill="url(#liveScreen)"/>
+
+  <!-- Pitch inside the screen -->
+  <g stroke="#ffffff" stroke-opacity=".2" fill="none" stroke-width="2">
+    <path d="M96 310l-14-150h286l-14 150z"/>
+    <path d="M92 235h266"/>
+    <ellipse cx="225" cy="235" rx="44" ry="20"/>
+  </g>
+  <circle cx="225" cy="235" r="9" fill="#ffffff"/>
+
+  <!-- LIVE tag -->
+  <g>
+    <rect x="80" y="152" width="72" height="26" rx="13" fill="url(#liveGold)"/>
+    <circle cx="96" cy="165" r="5" fill="#0B0B0C"/>
+    <text x="108" y="170" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0B0B0C">VIVO</text>
+  </g>
+
+  <!-- TV stand -->
+  <rect x="195" y="340" width="60" height="14" rx="4" fill="#151517"/>
+  <rect x="145" y="354" width="160" height="10" rx="5" fill="#151517"/>
+
+  <!-- Alternate feeds -->
+  <g>
+    <rect x="45" y="396" width="360" height="52" rx="12" fill="#151517"/>
+    <rect x="63" y="414" width="44" height="16" rx="8" fill="url(#liveGold)"/>
+    <rect x="123" y="416" width="150" height="12" rx="6" fill="#ffffff" opacity=".28"/>
+
+    <rect x="45" y="460" width="360" height="52" rx="12" fill="#141416"/>
+    <rect x="63" y="478" width="44" height="16" rx="8" fill="#ffffff" opacity=".16"/>
+    <rect x="123" y="480" width="120" height="12" rx="6" fill="#ffffff" opacity=".16"/>
+
+    <rect x="45" y="524" width="360" height="52" rx="12" fill="#131315"/>
+    <rect x="63" y="542" width="44" height="16" rx="8" fill="#ffffff" opacity=".1"/>
+    <rect x="123" y="544" width="168" height="12" rx="6" fill="#ffffff" opacity=".1"/>
+  </g>
+</svg>
