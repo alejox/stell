@@ -19,7 +19,7 @@ export function Hero() {
         className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[420px] w-[820px] max-w-full -translate-x-1/2 rounded-full bg-primary/20 blur-[140px]"
       />
 
-      <div className="section-container flex flex-col items-center gap-6 py-24 text-center md:py-36">
+      <div className="section-container flex flex-col items-center gap-6 py-16 text-center sm:py-24 md:py-36">
         <span className="rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
           {hero.eyebrow}
         </span>

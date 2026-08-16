@@ -42,7 +42,7 @@ function DeviceCard({ device }: { device: DeviceLink }) {
 
 export function DownloadsSection() {
   return (
-    <section id="descargar" className="section-container py-20 sm:py-28">
+    <section id="descargar" className="section-container py-14 sm:py-20 lg:py-28">
       <SectionHeading
         eyebrow="Descargar"
         title="Dónde se instala"

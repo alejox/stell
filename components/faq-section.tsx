@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export function FaqSection() {
   return (
-    <section id="faqs" className="section-container py-20 sm:py-28">
+    <section id="faqs" className="section-container py-14 sm:py-20 lg:py-28">
       <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:items-start lg:gap-20">
         <div className="flex flex-col items-start gap-6">
           <SectionHeading

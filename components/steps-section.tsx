@@ -4,7 +4,7 @@ import { CtaLink } from "@/components/ui/cta-link";
 
 export function StepsSection() {
   return (
-    <section id="como-comprar" className="section-container py-20 sm:py-28">
+    <section id="como-comprar" className="section-container py-14 sm:py-20 lg:py-28">
       <SectionHeading
         eyebrow="Cómo comprar"
         title="De la web a tu pantalla"

@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export function CatalogSection() {
   return (
-    <section id="contenido" className="section-container py-20 sm:py-28">
+    <section id="contenido" className="section-container py-14 sm:py-20 lg:py-28">
       <SectionHeading
         eyebrow="Contenido"
         title="Qué vas a encontrar"
@@ -18,7 +18,8 @@ export function CatalogSection() {
             key={item.title}
             className="surface group overflow-hidden rounded-card transition-colors duration-300 hover:border-primary/40"
           >
-            <div className="relative h-44 w-full overflow-hidden">
+            {/* Same ratio as the artwork (600x376), so object-cover has nothing to crop. */}
+            <div className="relative aspect-[600/376] w-full overflow-hidden">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -28,7 +29,7 @@ export function CatalogSection() {
               />
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-[linear-gradient(180deg,transparent_40%,var(--color-surface-raised))]"
+                className="absolute inset-0 bg-[linear-gradient(180deg,transparent_70%,var(--color-surface-raised))]"
               />
             </div>
 

@@ -71,7 +71,7 @@ function PlanCard({ plan }: { plan: Plan }) {
 
 export function PricingSection() {
   return (
-    <section id="planes" className="relative isolate py-20 sm:py-28">
+    <section id="planes" className="relative isolate py-14 sm:py-20 lg:py-28">
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(238,181,0,0.14)_0%,transparent_70%)]"

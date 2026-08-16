@@ -13,7 +13,7 @@ export function DistributorsSection() {
     countries.find((country) => country.name === selectedName) ?? countries[0];
 
   return (
-    <section id="distribuidores" className="section-container py-20 sm:py-28">
+    <section id="distribuidores" className="section-container py-14 sm:py-20 lg:py-28">
       <SectionHeading
         eyebrow="Distribuidores"
         title="Elige un distribuidor"
