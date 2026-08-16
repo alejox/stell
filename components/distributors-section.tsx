@@ -37,12 +37,13 @@ export function DistributorsSection() {
                   : "border-white/10 bg-surface-raised text-white/70 hover:border-primary/40 hover:text-white"
               }`}
             >
+              {/* Square box: the flag artwork is a circle, cropping it would clip the edges. */}
               <Image
                 src={country.flag}
                 alt=""
                 width={24}
-                height={18}
-                className="h-4 w-6 rounded-[2px] object-cover"
+                height={24}
+                className="size-5 shrink-0 object-contain"
               />
               {country.name}
             </button>
@@ -64,8 +65,8 @@ export function DistributorsSection() {
                   src={selected.flag}
                   alt=""
                   width={40}
-                  height={30}
-                  className="h-7 w-10 rounded-[3px] object-cover"
+                  height={40}
+                  className="size-9 shrink-0 object-contain"
                 />
                 <div>
                   <p className="font-semibold">{distributor.name}</p>
