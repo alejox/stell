@@ -351,13 +351,14 @@ export const distributors: Record<string, Distributor> = {
     name: "Ivan",
     whatsapp: "https://wa.me/593983013302",
   },
-    accesoriosmix:{
+  accesoriosmix:{
     name:"Accesorios Mix",
     whatsapp: "https://wa.me/593969380656",
   },
   javiertech:{
     name:"JavierTech",
     whatsapp: "https://wa.me/593967110242",
+    telegram: "https://t.me/Javiertech593",
   }
 };
 
