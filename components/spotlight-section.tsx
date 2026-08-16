@@ -30,7 +30,7 @@ export function SpotlightSection() {
               />
               <Image
                 src={spotlight.image}
-                alt=""
+                alt={`${spotlight.eyebrow} en Stella TV: ${spotlight.title}`}
                 width={450}
                 height={600}
                 sizes="(min-width: 768px) 28rem, 100vw"

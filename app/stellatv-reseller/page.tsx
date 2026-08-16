@@ -2,39 +2,50 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ShieldCheck, TrendingUp, Smartphone, Users, Headset } from "lucide-react";
-import { brand, siteUrl } from "@/content/site";
+import { brand, seo, siteUrl } from "@/content/site";
 
 const resellerTitle = "Conviértete en revendedor de Stella TV";
 const resellerDescription =
   "Adquiere créditos de Stella TV a precio mayorista, véndelos a precio minorista y obtén excelentes beneficios. Únete a nuestra red de afiliados y disfruta del mejor servicio en línea.";
 
+/** Kept under ~155 characters so Google shows it whole instead of truncating. */
+const resellerMetaDescription =
+  "Conviértete en revendedor de Stella TV: compra créditos a precio mayorista, gestiona a tus clientes desde tu panel y escala tus ganancias.";
+
 export const metadata: Metadata = {
-  title: "Revendedores de Stella TV",
-  description: resellerDescription,
+  title: "Ser revendedor: créditos al por mayor",
+  description: resellerMetaDescription,
+  keywords: [
+    "revendedor stella tv",
+    "reseller stella tv",
+    "panel stella tv",
+    "creditos stella tv",
+    "distribuidor stella tv",
+  ],
   alternates: {
     canonical: "/stellatv-reseller",
   },
   openGraph: {
-    title: "Revendedores de Stella TV | Stella TV",
-    description: resellerDescription,
+    title: `${resellerTitle} | ${brand.name}`,
+    description: resellerMetaDescription,
     url: "/stellatv-reseller",
     type: "website",
     locale: "es_ES",
     siteName: brand.name,
     images: [
       {
-        url: brand.logo,
-        width: 200,
-        height: 65,
-        alt: brand.name,
+        url: seo.ogImage,
+        width: seo.ogImageWidth,
+        height: seo.ogImageHeight,
+        alt: resellerTitle,
       },
     ],
   },
   twitter: {
-    card: "summary",
-    title: "Revendedores de Stella TV | Stella TV",
-    description: resellerDescription,
-    images: [brand.logo],
+    card: "summary_large_image",
+    title: `${resellerTitle} | ${brand.name}`,
+    description: resellerMetaDescription,
+    images: [seo.ogImage],
   },
 };
 

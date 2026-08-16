@@ -82,7 +82,7 @@ export function PricingSection() {
           eyebrow="Planes"
           title="Precios de Stella TV"
           highlight="2026"
-          description="Elegí el plan que quieras y realizá el pago con un distribuidor autorizado. Tus datos de acceso se envían por correo electrónico."
+          description="Elige el plan que quieras y realiza el pago con un distribuidor autorizado. Tus datos de acceso se envían por correo electrónico."
         />
 
         <ul className="mt-20 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">

@@ -86,7 +86,34 @@ export const downloads = {
   tv: "https://www.stellatv.net/tv.apk",
 } as const;
 
-export const siteUrl = "https://www.stellatv.net";
+/** Canonical origin of THIS site. Everything SEO-related derives from it. */
+export const siteUrl = "https://www.stellatv.lat";
+
+/**
+ * Search-facing copy. Kept apart from the on-page copy because it answers a
+ * different question: what a person typing into Google needs to read to click.
+ */
+export const seo = {
+  title: "Stella TV Oficial | Comprar cuenta y planes 2026",
+  description:
+    "Compra tu cuenta Stella TV oficial: +1000 canales en vivo, +90 de deportes, películas y series en HD. Planes desde $8 con activación inmediata.",
+  keywords: [
+    "stella tv",
+    "comprar stella tv",
+    "stella tv oficial",
+    "planes stella tv",
+    "precios stella tv",
+    "cuenta stella tv",
+    "stella tv apk",
+    "stella tv 2026",
+    "canales en vivo",
+    "iptv latino",
+  ],
+  /** 960x540 — above the 600x315 minimum for large social cards. */
+  ogImage: "/image/main-banner-bg.jpg",
+  ogImageWidth: 960,
+  ogImageHeight: 540,
+} as const;
 
 export const navLinks: NavLink[] = [
   { label: "Planes", href: "/#planes" },
@@ -115,7 +142,7 @@ export const hero = {
 export const devices: DeviceLink[] = [
   {
     name: "Celular",
-    description: "Android y tablets. Instalás el APK y entrás con tus datos.",
+    description: "Android y tablets. Instala el APK e ingresa con tus datos.",
     href: downloads.mobile,
     icon: "smartphone",
   },
@@ -226,7 +253,7 @@ export const spotlights: Spotlight[] = [
     eyebrow: "Canales HOT",
     title: "Contenido para adultos HD (+18)",
     description:
-      "Una amplia selección de canales para adultos (+18). Además podés configurar un control parental con la clave que elijas para restringir el acceso, así solo vos podés verlo.",
+      "Una amplia selección de canales para adultos (+18). Además puedes configurar un control parental con la clave que elijas para restringir el acceso, así solo tú puedes verlo.",
     image: "/image/aplicacion-flujo-tv.7df5cfc3.png",
   },
   {
@@ -240,7 +267,7 @@ export const spotlights: Spotlight[] = [
     eyebrow: "Cine en casa",
     title: "Películas y series en estreno",
     description:
-      "No hace falta ir al cine: en Stella TV encontrás las películas y series más recientes de distintas plataformas de streaming.",
+      "No hace falta ir al cine: en Stella TV encuentras las películas y series más recientes de distintas plataformas de streaming.",
     image: "/image/flujo-tv-apk-android.07056ab1.png",
   },
 ];
@@ -353,7 +380,7 @@ export const faqs: FaqItem[] = [
   {
     question: "¿En cuántas pantallas se puede ver?",
     answer:
-      "Los planes mensual y trimestral incluyen 3 pantallas simultáneas; los planes semestral y anual, 4. Podés usarlas en la misma casa o en lugares distintos, con la misma o diferente IP.",
+      "Los planes mensual y trimestral incluyen 3 pantallas simultáneas; los planes semestral y anual, 4. Puedes usarlas en la misma casa o en lugares distintos, con la misma o diferente IP.",
   },
   {
     question: "¿Cómo instalar Stella TV en una PC o Mac?",
@@ -379,7 +406,7 @@ export const faqs: FaqItem[] = [
 
 export const footer = {
   description:
-    "Somos Stella TV Oficial, el lugar donde podés adquirir una cuenta premium para disfrutar del mejor entretenimiento en línea. ¡Ofrecemos los mejores planes y promociones!",
+    "Somos Stella TV Oficial, el lugar donde puedes adquirir una cuenta premium para disfrutar del mejor entretenimiento en línea. ¡Ofrecemos los mejores planes y promociones!",
   columns: [
     {
       title: "Ofrecemos",

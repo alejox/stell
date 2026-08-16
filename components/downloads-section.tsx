@@ -45,9 +45,9 @@ export function DownloadsSection() {
     <section id="descargar" className="section-container py-20 sm:py-28">
       <SectionHeading
         eyebrow="Descargar"
-        title="Instalá Stella TV en"
+        title="Instala Stella TV en"
         highlight="tu dispositivo"
-        description="Elegí dónde vas a ver y descargá la aplicación. Todo el contenido en un solo lugar, en cualquier dispositivo Android."
+        description="Elige dónde vas a ver y descarga la aplicación. Todo el contenido en un solo lugar, en cualquier dispositivo Android."
       />
 
       <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

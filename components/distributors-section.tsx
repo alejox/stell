@@ -16,9 +16,9 @@ export function DistributorsSection() {
     <section id="distribuidores" className="section-container py-20 sm:py-28">
       <SectionHeading
         eyebrow="Distribuidores"
-        title="Elegí un distribuidor"
+        title="Elige un distribuidor"
         highlight="de tu país"
-        description="Contactá directamente al distribuidor autorizado de tu país para comprar tu cuenta, renovarla o resolver cualquier duda."
+        description="Contacta directamente al distribuidor autorizado de tu país para comprar tu cuenta, renovarla o resolver cualquier duda."
       />
 
       <div className="mt-12 flex flex-wrap justify-center gap-2.5">

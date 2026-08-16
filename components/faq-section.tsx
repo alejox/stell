@@ -13,12 +13,12 @@ export function FaqSection() {
             eyebrow="FAQ"
             title="Preguntas"
             highlight="frecuentes"
-            description="Acá están las respuestas a las dudas más comunes sobre la aplicación: cómo renovar Stella TV, cómo adquirir una cuenta y bastante más."
+            description="Aquí están las respuestas a las dudas más comunes sobre la aplicación: cómo renovar Stella TV, cómo adquirir una cuenta y bastante más."
           />
 
           <Image
             src="/image/dudas-magis-tv.81befdbc.png"
-            alt=""
+            alt="Preguntas frecuentes sobre Stella TV"
             width={578}
             height={699}
             sizes="(min-width: 1024px) 24rem, 60vw"

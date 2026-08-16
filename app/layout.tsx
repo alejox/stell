@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { brand, siteUrl } from "@/content/site";
+import { brand, seo, siteUrl } from "@/content/site";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
@@ -14,35 +14,48 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${brand.name} — ${brand.tagline}`,
+    default: seo.title,
     template: `%s | ${brand.name}`,
   },
-  description: brand.description,
+  description: seo.description,
+  keywords: [...seo.keywords],
   applicationName: brand.name,
+  category: "entertainment",
   alternates: {
     canonical: "/",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: `${brand.name} — ${brand.tagline}`,
-    description: brand.description,
+    title: seo.title,
+    description: seo.description,
     type: "website",
     locale: "es_ES",
     url: "/",
     siteName: brand.name,
     images: [
       {
-        url: brand.logo,
-        width: 200,
-        height: 65,
-        alt: brand.name,
+        url: seo.ogImage,
+        width: seo.ogImageWidth,
+        height: seo.ogImageHeight,
+        alt: `${brand.name} — ${brand.tagline}`,
       },
     ],
   },
   twitter: {
-    card: "summary",
-    title: `${brand.name} — ${brand.tagline}`,
-    description: brand.description,
-    images: [brand.logo],
+    card: "summary_large_image",
+    title: seo.title,
+    description: seo.description,
+    images: [seo.ogImage],
   },
 };
 
