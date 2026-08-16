@@ -29,7 +29,7 @@ export function SiteFooter() {
             className="inline-flex items-center gap-2 rounded-full bg-[#25D366]/15 px-4 py-2.5 text-sm font-semibold text-[#25D366] transition-colors hover:bg-[#25D366] hover:text-black"
           >
             <MessageCircle size={16} />
-            Atención al cliente: {support.phone}
+            Atención al cliente
           </a>
         </div>
 

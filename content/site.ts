@@ -365,7 +365,7 @@ export const countries: Country[] = [
   {
     name: "Colombia",
     flag: "/flags/Colombia-SVG.svg",
-    distributors: ["oleadatvprocol","mgsprotv", "mgsproCintia"],
+    distributors: ["oleadatvprocol", "mgsproCintia", "mgsprotv"],
   },
   {
     name: "Ecuador",
@@ -377,8 +377,16 @@ export const countries: Country[] = [
     flag: "/flags/Venezuela-SVG.svg",
     distributors: ["carlosValbuena"],
   },
-  { name: "Perú", flag: "/flags/Peru-SVG.svg", distributors: ["carlosValbuena"] },
-  { name: "Chile", flag: "/flags/Chile-SVG.svg", distributors: ["carlosValbuena"] },
+  {
+    name: "Perú",
+    flag: "/flags/Peru-SVG.svg",
+    distributors: ["carlosValbuena"],
+  },
+  {
+    name: "Chile",
+    flag: "/flags/Chile-SVG.svg",
+    distributors: ["carlosValbuena"],
+  },
   { name: "Brasil", flag: "/flags/Brazil-SVG.svg", distributors: ["danielTv"] },
   { name: "Cuba", flag: "/flags/Cuba-SVG.svg", distributors: ["danielTv"] },
   {
