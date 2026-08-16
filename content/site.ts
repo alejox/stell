@@ -66,7 +66,6 @@ export type FaqItem = {
 
 export type Distributor = {
   name: string;
-  phone: string;
   whatsapp: string;
   telegram?: string;
 };
@@ -320,43 +319,36 @@ export function supportWhatsapp(topic: string): string {
 export const distributors: Record<string, Distributor> = {
   oleadatvprocol: {
     name: "STELLATV-COLOMBIA",
-    phone: "+57 321 6647256",
     whatsapp: "https://wa.me/573216647256",
     telegram: "https://t.me/oleadatvpro",
   },
   mgsprotv: {
     name: "STELLATV-JUAN",
-    phone: "+57 313 253 1929",
     whatsapp: "https://wa.me/573132531929",
     telegram: "https://t.me/magprotv",
   },
   mgsproCintia: {
     name: "STELLATV-CINTIA",
-    phone: "+57 311 352 3221",
     whatsapp: "https://wa.me/573113523221",
     telegram: "https://t.me/oleadatvpro",
   },
   carlosValbuena: {
     name: "Carlos Valbuena",
-    phone: "+58 414 368 8614",
     whatsapp: "https://wa.me/584143688614",
     telegram: "https://t.me/cvalbuena",
   },
   danielTv: {
     name: "DanielTV",
-    phone: "+55 47 99182 2685",
     whatsapp: "https://wa.me/5547991822685",
     telegram: "https://t.me/jorgedaniel92",
   },
   drSystemSolutions: {
     name: "Dr System SolutionsPC",
-    phone: "+593 98 585 9472",
     whatsapp: "https://wa.me/593985859472",
     telegram: "https://t.me/SOPORTEDEMAGISTVPRO",
   },
   ivan: {
     name: "Ivan",
-    phone: "+593 98 301 3302",
     whatsapp: "https://wa.me/593983013302",
   },
 };

@@ -79,10 +79,6 @@ export function DistributorsSection() {
                 </div>
               </div>
 
-              <p className="inline-flex items-center gap-2 text-sm text-white/60">
-                <Phone size={14} className="text-primary" />
-                {distributor.phone}
-              </p>
 
               <div className="mt-auto flex flex-wrap gap-2.5">
                 <a
