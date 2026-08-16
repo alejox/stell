@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ShieldCheck, TrendingUp, Smartphone, Users, Headset } from "lucide-react";
-import { brand, siteUrl } from "@/content/site";
+import { brand, siteUrl, supportWhatsapp } from "@/content/site";
 
 const resellerTitle = "Conviértete en revendedor de Stella TV";
 const resellerDescription =
@@ -235,7 +235,7 @@ export default function ResellerPage() {
                   <span>No Puede Vender Panel</span>
                 </li>
               </ul>
-              <Link href="https://wa.me/message/3PKA7YCORQRVA1" className="btn-outline w-full hover:bg-primary/10">
+              <Link href={supportWhatsapp("Quiero información sobre el Panel Bronce.")} className="btn-outline w-full hover:bg-primary/10">
                 COMPRAR
               </Link>
             </div>
@@ -267,7 +267,7 @@ export default function ResellerPage() {
                   <span>No Puede Vender Panel</span>
                 </li>
               </ul>
-              <Link href="https://wa.me/message/3PKA7YCORQRVA1" className="btn-outline w-full hover:bg-primary/10">
+              <Link href={supportWhatsapp("Quiero información sobre el Panel Plata.")} className="btn-outline w-full hover:bg-primary/10">
                 COMPRAR
               </Link>
             </div>
@@ -302,7 +302,7 @@ export default function ResellerPage() {
                   <span className="font-semibold text-white">Puede Vender Panel</span>
                 </li>
               </ul>
-              <Link href="https://wa.me/message/3PKA7YCORQRVA1" className="btn-primary w-full shadow-[0_0_15px_rgba(238,181,0,0.2)]">
+              <Link href={supportWhatsapp("Quiero información sobre el Super Panel.")} className="btn-primary w-full shadow-[0_0_15px_rgba(238,181,0,0.2)]">
                 COMPRAR
               </Link>
             </div>
@@ -334,7 +334,7 @@ export default function ResellerPage() {
                   <span className="font-semibold text-white">Puede Vender Panel</span>
                 </li>
               </ul>
-              <Link href="https://wa.me/message/3PKA7YCORQRVA1" className="btn-outline w-full hover:bg-primary/10">
+              <Link href={supportWhatsapp("Quiero información sobre el Super Plata.")} className="btn-outline w-full hover:bg-primary/10">
                 COMPRAR
               </Link>
             </div>

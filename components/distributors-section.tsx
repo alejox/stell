@@ -3,7 +3,12 @@
 import Image from "next/image";
 import { useState } from "react";
 import { MessageCircle, Phone, Send } from "lucide-react";
-import { countries, distributorWhatsapp, distributors } from "@/content/site";
+import {
+  countries,
+  distributorWhatsapp,
+  distributors,
+  supportWhatsapp,
+} from "@/content/site";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 export function DistributorsSection() {
@@ -114,8 +119,18 @@ export function DistributorsSection() {
       </ul>
 
       <p className="mt-10 text-center text-sm text-white/40">
-        ¿No ves tu país en la lista? Escribe a cualquiera de los distribuidores y
-        te indican cómo activar tu cuenta desde donde estés.
+        ¿No ves tu país en la lista?{" "}
+        <a
+          href={supportWhatsapp(
+            "No veo mi país en la lista de distribuidores. ¿Cómo puedo activar mi cuenta?",
+          )}
+          target="_blank"
+          rel="noreferrer"
+          className="font-medium text-primary underline-offset-4 hover:underline"
+        >
+          Escríbenos a la línea de atención
+        </a>{" "}
+        y te indicamos cómo activar tu cuenta desde donde estés.
       </p>
     </section>
   );

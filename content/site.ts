@@ -303,16 +303,29 @@ export const spotlights: Spotlight[] = [
   },
 ];
 
+/** Official support line: reseller enquiries and general customer service. */
+export const support = {
+  phone: "+57 321 664 7256",
+  whatsapp: "https://wa.me/573216647256",
+} as const;
+
+/** Opens the support chat with the reason for the message already written. */
+export function supportWhatsapp(topic: string): string {
+  const message = `Hola, te contacto desde la web de ${brand.name}. ${topic}`;
+
+  return `${support.whatsapp}?text=${encodeURIComponent(message)}`;
+}
+
 /** Authorized distributors, keyed by id. Several of them cover more than one country. */
 export const distributors: Record<string, Distributor> = {
   oleadatvprocol: {
-    name: "STELLATV-JUAN",
-    phone: "+57 314 576 3378",
-    whatsapp: "https://wa.me/573145763378",
+    name: "STELLATV-COLOMBIA",
+    phone: "+57 321 6647256",
+    whatsapp: "https://wa.me/573216647256",
     telegram: "https://t.me/oleadatvpro",
   },
   mgsprotv: {
-    name: "STELLATV-COLOMBIA",
+    name: "STELLATV-JUAN",
     phone: "+57 313 253 1929",
     whatsapp: "https://wa.me/573132531929",
     telegram: "https://t.me/magprotv",
@@ -352,7 +365,7 @@ export const countries: Country[] = [
   {
     name: "Colombia",
     flag: "/flags/Colombia-SVG.svg",
-    distributors: ["mgsprotv", "oleadatvprocol", "mgsproCintia"],
+    distributors: ["oleadatvprocol","mgsprotv", "mgsproCintia"],
   },
   {
     name: "Ecuador",

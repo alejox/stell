@@ -1,4 +1,13 @@
-import { brand, faqs, plans, seo, siteUrl, steps } from "@/content/site";
+import {
+  brand,
+  countries,
+  faqs,
+  plans,
+  seo,
+  siteUrl,
+  steps,
+  support,
+} from "@/content/site";
 
 /**
  * JSON-LD for the landing page. Search engines read this instead of guessing:
@@ -13,6 +22,13 @@ export function StructuredData() {
     url: siteUrl,
     logo: `${siteUrl}${brand.logo}`,
     description: seo.description,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      telephone: support.phone,
+      availableLanguage: "Spanish",
+      areaServed: countries.map((country) => country.name),
+    },
   };
 
   const website = {

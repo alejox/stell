@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { brand, footer } from "@/content/site";
+import { MessageCircle } from "lucide-react";
+import { brand, footer, support, supportWhatsapp } from "@/content/site";
 
 export function SiteFooter() {
   return (
@@ -20,6 +21,16 @@ export function SiteFooter() {
           <p className="max-w-sm text-sm leading-relaxed text-white/50">
             {footer.description}
           </p>
+
+          <a
+            href={supportWhatsapp("Quiero hacer una consulta.")}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-[#25D366]/15 px-4 py-2.5 text-sm font-semibold text-[#25D366] transition-colors hover:bg-[#25D366] hover:text-black"
+          >
+            <MessageCircle size={16} />
+            Atención al cliente: {support.phone}
+          </a>
         </div>
 
         {footer.columns.map((column) => (
