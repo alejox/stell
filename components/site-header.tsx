@@ -42,7 +42,7 @@ export function SiteHeader() {
           <CtaLink href="/stellatv-reseller" variant="outline" className="px-5 py-2">
             Reseller
           </CtaLink>
-          <CtaLink href="#planes" className="px-5 py-2">
+          <CtaLink href="/#planes" className="px-5 py-2">
             Comprar
           </CtaLink>
         </div>
@@ -82,7 +82,7 @@ export function SiteHeader() {
               <CtaLink href="/stellatv-reseller" variant="outline">
                 Ser revendedor
               </CtaLink>
-              <CtaLink href="#planes">Comprar Stella TV</CtaLink>
+              <CtaLink href="/#planes">Comprar Stella TV</CtaLink>
             </li>
           </ul>
         </nav>

@@ -15,6 +15,7 @@ export function SpotlightSection() {
       />
 
       <div className="section-container flex flex-col gap-20">
+        <h2 className="sr-only">Más contenido de Stella TV</h2>
         {spotlights.map((spotlight, index) => (
           <article
             key={spotlight.title}

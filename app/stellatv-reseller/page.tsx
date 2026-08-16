@@ -1,14 +1,94 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, ShieldCheck, TrendingUp, Smartphone, Users, Headset } from "lucide-react";
+import { brand, siteUrl } from "@/content/site";
+
+const resellerTitle = "Conviértete en revendedor de Stella TV";
+const resellerDescription =
+  "Adquiere créditos de Stella TV a precio mayorista, véndelos a precio minorista y obtén excelentes beneficios. Únete a nuestra red de afiliados y disfruta del mejor servicio en línea.";
+
+export const metadata: Metadata = {
+  title: "Revendedores de Stella TV",
+  description: resellerDescription,
+  alternates: {
+    canonical: "/stellatv-reseller",
+  },
+  openGraph: {
+    title: "Revendedores de Stella TV | Stella TV",
+    description: resellerDescription,
+    url: "/stellatv-reseller",
+    type: "website",
+    locale: "es_ES",
+    siteName: brand.name,
+    images: [
+      {
+        url: brand.logo,
+        width: 200,
+        height: 65,
+        alt: brand.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Revendedores de Stella TV | Stella TV",
+    description: resellerDescription,
+    images: [brand.logo],
+  },
+};
+
+const resellerJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${siteUrl}/stellatv-reseller#webpage`,
+  url: `${siteUrl}/stellatv-reseller`,
+  name: resellerTitle,
+  description: resellerDescription,
+  inLanguage: "es",
+  about: {
+    "@type": "Organization",
+    name: brand.name,
+    url: siteUrl,
+    logo: `${siteUrl}${brand.logo}`,
+  },
+  mainEntity: {
+    "@type": "ItemList",
+    name: "Beneficios para revendedores de Stella TV",
+    itemListElement: [
+      "Invierte Poco",
+      "Fácil Administración",
+      "Gana Mucho",
+      "Soporte Técnico",
+      "Acceso al Panel",
+      "Mayor Popularidad",
+    ].map((name, position) => ({
+      "@type": "ListItem",
+      position: position + 1,
+      name,
+    })),
+  },
+};
 
 export default function ResellerPage() {
   return (
     <div className="min-h-screen bg-[#060505] text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(resellerJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       {/* Navigation (Simplified for this page, usually part of layout) */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-black/60 backdrop-blur-md border-b border-white/10">
         <Link href="/" className="flex items-center gap-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/image/logo.8c7d33ac.png" alt="Stella TV" className="h-10 w-auto" />
+          <Image
+            src={brand.logoCompact}
+            alt={brand.name}
+            width={105}
+            height={45}
+            className="h-10 w-auto"
+          />
         </Link>
         <div className="flex items-center gap-4">
           <Link href="/" className="text-sm font-medium text-white/80 hover:text-white transition-colors">
@@ -30,7 +110,7 @@ export default function ResellerPage() {
             Conviértete en revendedor de <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#d62d08]">Stella TV</span>
           </h1>
           <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Adquiere créditos de Stella TV a precio mayorista, véndelos a precio minorista y obtén excelentes beneficios. Únete a nuestra red de afiliados y disfruta del mejor servicio en línea.
+            {resellerDescription}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="#pricing" className="btn-primary text-lg px-8 py-4 w-full sm:w-auto shadow-[0_0_20px_rgba(238,181,0,0.3)] hover:shadow-[0_0_30px_rgba(238,181,0,0.5)]">
@@ -43,6 +123,7 @@ export default function ResellerPage() {
       {/* Features Section */}
       <section className="py-20 bg-[#0A0A0A] border-y border-white/5 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
+          <h2 className="sr-only">Beneficios de ser revendedor de Stella TV</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <div className="bg-[#121212] border border-white/5 p-8 rounded-2xl hover:border-primary/30 transition-colors group">

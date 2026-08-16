@@ -86,12 +86,14 @@ export const downloads = {
   tv: "https://www.stellatv.net/tv.apk",
 } as const;
 
+export const siteUrl = "https://www.stellatv.net";
+
 export const navLinks: NavLink[] = [
-  { label: "Planes", href: "#planes" },
-  { label: "Descargar", href: "#descargar" },
-  { label: "Contenido", href: "#contenido" },
-  { label: "Distribuidores", href: "#distribuidores" },
-  { label: "Dudas", href: "#faqs" },
+  { label: "Planes", href: "/#planes" },
+  { label: "Descargar", href: "/#descargar" },
+  { label: "Contenido", href: "/#contenido" },
+  { label: "Distribuidores", href: "/#distribuidores" },
+  { label: "Dudas", href: "/#faqs" },
 ];
 
 export const hero = {
@@ -100,7 +102,7 @@ export const hero = {
   subtitle: "Comprar Stella TV Online",
   description:
     "Los mejores planes con precios económicos, ofertas y promociones. Canales en vivo, películas, series y mucho deporte al comprar Stella TV Oficial.",
-  primaryCta: { label: "Ver planes", href: "#planes" },
+  primaryCta: { label: "Ver planes", href: "/#planes" },
   secondaryCta: { label: "Ser revendedor", href: "/stellatv-reseller" },
   stats: [
     { value: "+1000", label: "Canales en vivo" },
@@ -382,30 +384,30 @@ export const footer = {
     {
       title: "Ofrecemos",
       links: [
-        { label: "Canales en vivo", href: "#contenido" },
-        { label: "Películas HD", href: "#contenido" },
-        { label: "Series de TV", href: "#contenido" },
-        { label: "Deportes en vivo", href: "#contenido" },
-        { label: "Canales de adultos", href: "#contenido" },
+        { label: "Canales en vivo", href: "/#contenido" },
+        { label: "Películas HD", href: "/#contenido" },
+        { label: "Series de TV", href: "/#contenido" },
+        { label: "Deportes en vivo", href: "/#contenido" },
+        { label: "Canales de adultos", href: "/#contenido" },
       ],
     },
     {
       title: "Instalar en",
       links: [
-        { label: "Celulares", href: "#descargar" },
-        { label: "Smart TV", href: "#descargar" },
-        { label: "TV Box", href: "#descargar" },
-        { label: "Fire Stick", href: "#descargar" },
-        { label: "PC / Mac", href: "#descargar" },
+        { label: "Celulares", href: "/#descargar" },
+        { label: "Smart TV", href: "/#descargar" },
+        { label: "TV Box", href: "/#descargar" },
+        { label: "Fire Stick", href: "/#descargar" },
+        { label: "PC / Mac", href: "/#descargar" },
       ],
     },
     {
       title: "Stella TV",
       links: [
-        { label: "Planes", href: "#planes" },
-        { label: "Distribuidores", href: "#distribuidores" },
+        { label: "Planes", href: "/#planes" },
+        { label: "Distribuidores", href: "/#distribuidores" },
         { label: "Ser revendedor", href: "/stellatv-reseller" },
-        { label: "Preguntas frecuentes", href: "#faqs" },
+        { label: "Preguntas frecuentes", href: "/#faqs" },
       ],
     },
   ],
