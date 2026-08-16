@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #eeb500;
+  --color-primary-to: #d62d08;
+  --color-background: #000000;
+  --color-content: #ffffff;
+  --color-active: #ffff00;
+
+  /* Surfaces used by the landing sections. */
+  --color-surface: #0a0a0b;
+  --color-surface-raised: #121214;
+  --color-surface-border: rgba(255, 255, 255, 0.08);
+
+  --radius-card: 1.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-content);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-to) 100%);
+    border-radius: 2rem;
+    padding: 0.625rem 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    display: flex;
+  }
+  .btn-primary:hover {
+    background-image: linear-gradient(135deg, var(--color-primary-to) 0%, var(--color-primary) 100%);
+  }
+
+  .btn-primary2 {
+    background-image: linear-gradient(135deg, #ee7300 0%, var(--color-primary-to) 100%);
+    border-radius: 2rem;
+    padding: 0.625rem 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    display: flex;
+  }
+  .btn-primary2:hover {
+    background-image: linear-gradient(135deg, var(--color-primary-to) 0%, #ee7300 100%);
+  }
+
+  .btn-outline {
+    border-radius: 2rem;
+    border: 2px solid #eeb500;
+    padding: 0.625rem 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    display: flex;
+  }
+  .btn-outline:hover {
+    color: #eeb500;
+  }
+
+  .section-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Raised panel used by cards across the landing. */
+  .surface {
+    background-color: var(--color-surface-raised);
+    border: 1px solid var(--color-surface-border);
+  }
+
+  .text-gradient-brand {
+    background-image: linear-gradient(
+      110deg,
+      var(--color-primary) 0%,
+      var(--color-primary-to) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gray-text-fill-stroke-1 {
+    -webkit-text-fill-color: rgba(255,255,255,0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255,255,255,.15);
+  }
 }
