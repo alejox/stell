@@ -312,7 +312,7 @@ export const distributors: Record<string, Distributor> = {
     telegram: "https://t.me/oleadatvpro",
   },
   mgsprotv: {
-    name: "STELLATV-RICARDO",
+    name: "STELLATV-COLOMBIA",
     phone: "+57 313 253 1929",
     whatsapp: "https://wa.me/573132531929",
     telegram: "https://t.me/magprotv",
@@ -388,11 +388,10 @@ export const countries: Country[] = [
 /** Prefilled WhatsApp link so the customer does not start from a blank chat. */
 export function distributorWhatsapp(
   distributor: Distributor,
-  country: string,
   plan?: string,
 ): string {
   const about = plan ? `el plan de ${plan}` : "los planes";
-  const message = `Hola, te contacto desde la web de ${brand.name} (${country}). Quiero información sobre ${about} y la activación.`;
+  const message = `Hola, te contacto desde la web de ${brand.name}. Quiero información sobre ${about} y la activación.`;
 
   return `${distributor.whatsapp}?text=${encodeURIComponent(message)}`;
 }

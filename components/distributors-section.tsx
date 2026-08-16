@@ -81,7 +81,7 @@ export function DistributorsSection() {
 
               <div className="mt-auto flex flex-wrap gap-2.5">
                 <a
-                  href={distributorWhatsapp(distributor, selected.name)}
+                  href={distributorWhatsapp(distributor)}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-[#25D366]/15 px-4 py-2.5 text-xs font-semibold text-[#25D366] transition-colors hover:bg-[#25D366] hover:text-black"
