@@ -6,7 +6,7 @@ import { brand, seo, siteUrl } from "@/content/site";
 
 const resellerTitle = "Conviértete en revendedor de Stella TV";
 const resellerDescription =
-  "Adquiere créditos de Stella TV a precio mayorista, véndelos a precio minorista y obtén excelentes beneficios. Únete a nuestra red de afiliados y disfruta del mejor servicio en línea.";
+  "Compra créditos al por mayor, define tu propio precio de venta y activa cuentas desde tu panel en cualquier momento. Nosotros ponemos la plataforma y el soporte; el negocio lo manejas tú.";
 
 /** Kept under ~155 characters so Google shows it whole instead of truncating. */
 const resellerMetaDescription =
@@ -67,12 +67,12 @@ const resellerJsonLd = {
     "@type": "ItemList",
     name: "Beneficios para revendedores de Stella TV",
     itemListElement: [
-      "Invierte Poco",
-      "Fácil Administración",
-      "Gana Mucho",
-      "Soporte Técnico",
-      "Acceso al Panel",
-      "Mayor Popularidad",
+      "Empieza con poco",
+      "Panel sin vueltas",
+      "Margen real",
+      "Soporte cuando lo necesitas",
+      "Desde donde estés",
+      "Producto que se vende solo",
     ].map((name, position) => ({
       "@type": "ListItem",
       position: position + 1,
@@ -141,9 +141,9 @@ export default function ResellerPage() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                 <TrendingUp size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Invierte Poco</h3>
+              <h3 className="text-xl font-bold mb-3">Empieza con poco</h3>
               <p className="text-white/60 leading-relaxed">
-                Puedes comenzar adquiriendo un panel en la categoría bronce y, a medida que aumenten tus ventas, ir escalando con nosotros.
+                Arrancas con el panel más chico y subes de categoría cuando tus ventas lo justifiquen. No hay que inmovilizar capital para probar si el negocio te funciona.
               </p>
             </div>
 
@@ -152,9 +152,9 @@ export default function ResellerPage() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                 <ShieldCheck size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Fácil Administración</h3>
+              <h3 className="text-xl font-bold mb-3">Panel sin vueltas</h3>
               <p className="text-white/60 leading-relaxed">
-                Ofrecemos un panel completamente optimizado que te permite gestionar fácilmente las cuentas de tus clientes y revendedores.
+                Creas, renuevas y consultas las cuentas de tus clientes desde una sola pantalla. Si además tienes sub-revendedores, los administras desde el mismo lugar.
               </p>
             </div>
 
@@ -163,9 +163,9 @@ export default function ResellerPage() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                 <Users size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Gana Mucho</h3>
+              <h3 className="text-xl font-bold mb-3">Margen real</h3>
               <p className="text-white/60 leading-relaxed">
-                Obtén ingresos superiores a un sueldo vendiendo cuentas; con nuestros precios, puedes ganar hasta un 100% de rentabilidad.
+                Tu ganancia es la diferencia entre el precio de panel y lo que cobras al cliente final. Con los valores mayoristas actuales, ese margen puede duplicar lo que invertiste.
               </p>
             </div>
 
@@ -174,9 +174,9 @@ export default function ResellerPage() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                 <Headset size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Soporte Técnico</h3>
+              <h3 className="text-xl font-bold mb-3">Soporte cuando lo necesitas</h3>
               <p className="text-white/60 leading-relaxed">
-                Disponemos de soporte técnico 24/7 para responder cualquier consulta o duda sobre el funcionamiento de nuestro servicio y plataforma.
+                Hay soporte técnico disponible las 24 horas para lo que no puedas resolver solo: fallas de reproducción, dudas del panel o problemas de activación.
               </p>
             </div>
 
@@ -185,9 +185,9 @@ export default function ResellerPage() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                 <Smartphone size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Acceso al Panel</h3>
+              <h3 className="text-xl font-bold mb-3">Desde donde estés</h3>
               <p className="text-white/60 leading-relaxed">
-                Accede al panel desde tu móvil o computadora, disponible desde cualquier lugar del mundo con conexión a internet.
+                El panel corre en el navegador, así que lo abres desde el celular o la computadora, estés donde estés, sin instalar nada.
               </p>
             </div>
 
@@ -196,9 +196,9 @@ export default function ResellerPage() {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                 <CheckCircle2 size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Mayor Popularidad</h3>
+              <h3 className="text-xl font-bold mb-3">Producto que se vende solo</h3>
               <p className="text-white/60 leading-relaxed">
-                Stella TV es el servicio más reconocido y popular del mercado, gracias a su extenso y alta calidad de contenido.
+                Stella TV ya tiene demanda propia en la región: buena parte de tus clientes van a llegar buscando el servicio por su nombre, no a que se lo expliques.
               </p>
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function ResellerPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Planes de Paneles</h2>
             <p className="text-white/60 max-w-2xl mx-auto text-lg">
-              Seleccione su plan para ser un revendedor oficial de Stella TV, con los mejores precios del mercado y pagos seguros a nivel mundial.
+              Cada panel define cuántos créditos recibes y qué puedes hacer con ellos. Elige el que se ajuste al volumen que manejas hoy y súbelo cuando crezcas.
             </p>
           </div>
 
@@ -348,7 +348,7 @@ export default function ResellerPage() {
             </div>
           </div>
           <div className="mt-8 text-center text-white/40 text-sm">
-            *Pagos 100% seguros y rápidos en cualquier parte del mundo.
+            *Coordinas el pago directamente con nuestro equipo, desde cualquier país.
           </div>
         </div>
       </section>

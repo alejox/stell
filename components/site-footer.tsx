@@ -46,7 +46,10 @@ export function SiteFooter() {
 
       <div className="border-t border-white/5">
         <div className="section-container flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/40 sm:flex-row">
-          <p>{brand.copyright}</p>
+          <p>
+            © {new Date().getFullYear()} {brand.legalName}. Todos los derechos
+            reservados.
+          </p>
 
           <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
             <li>

@@ -13,7 +13,7 @@ export function FaqSection() {
             eyebrow="FAQ"
             title="Preguntas"
             highlight="frecuentes"
-            description="Aquí están las respuestas a las dudas más comunes sobre la aplicación: cómo renovar Stella TV, cómo adquirir una cuenta y bastante más."
+            description="Las dudas que más nos llegan antes de comprar: compatibilidad de dispositivos, pantallas simultáneas, medios de pago, renovación y control parental."
           />
 
           <Image

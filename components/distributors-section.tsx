@@ -18,7 +18,7 @@ export function DistributorsSection() {
         eyebrow="Distribuidores"
         title="Elige un distribuidor"
         highlight="de tu país"
-        description="Contacta directamente al distribuidor autorizado de tu país para comprar tu cuenta, renovarla o resolver cualquier duda."
+        description="Cada país tiene su propio distribuidor autorizado. Elige el tuyo, abre el chat y coordina el pago con los medios disponibles en tu zona."
       />
 
       <div className="mt-12 flex flex-wrap justify-center gap-2.5">
@@ -113,8 +113,8 @@ export function DistributorsSection() {
       </ul>
 
       <p className="mt-10 text-center text-sm text-white/40">
-        ¿Tarjeta, transferencia o cripto? Cada distribuidor te indica los medios
-        de pago disponibles en tu país.
+        ¿No ves tu país en la lista? Escribe a cualquiera de los distribuidores y
+        te indican cómo activar tu cuenta desde donde estés.
       </p>
     </section>
   );

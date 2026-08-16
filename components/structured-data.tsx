@@ -1,4 +1,4 @@
-import { brand, faqs, plans, seo, siteUrl } from "@/content/site";
+import { brand, faqs, plans, seo, siteUrl, steps } from "@/content/site";
 
 /**
  * JSON-LD for the landing page. Search engines read this instead of guessing:
@@ -63,6 +63,21 @@ export function StructuredData() {
     },
   };
 
+  const howTo = {
+    "@type": "HowTo",
+    "@id": `${siteUrl}/#como-comprar`,
+    name: `Cómo comprar una cuenta de ${brand.name}`,
+    description:
+      "Los tres pasos para contratar el servicio: elegir el plan, contactar al distribuidor autorizado del país y recibir los datos de acceso.",
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.title,
+      text: step.description,
+      url: `${siteUrl}/#como-comprar`,
+    })),
+  };
+
   const faqPage = {
     "@type": "FAQPage",
     "@id": `${siteUrl}/#faq`,
@@ -75,7 +90,7 @@ export function StructuredData() {
 
   const graph = {
     "@context": "https://schema.org",
-    "@graph": [organization, website, webPage, product, faqPage],
+    "@graph": [organization, website, webPage, product, howTo, faqPage],
   };
 
   return (

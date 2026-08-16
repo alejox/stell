@@ -1,9 +1,10 @@
 /**
  * Single source of truth for all site copy and data.
  *
- * Copy and pricing come from the live Stella TV site. Distributors come from
- * the authorized distributor network — change them here and every section
- * updates, no component edits required.
+ * The prose here is written for this site — it is deliberately not a copy of
+ * any other Stella TV page, so search engines have no duplicate to collapse.
+ * Facts (prices, screen counts, supported devices) are the ones the service
+ * actually offers; change them here and every section updates.
  */
 
 export type NavLink = {
@@ -22,7 +23,7 @@ export type DeviceLink = {
 export type Plan = {
   id: string;
   name: string;
-  /** Short line under the plan name, e.g. "12 + 2 meses (regalo extra)". */
+  /** Short line under the plan name, e.g. "Plan anual". */
   tagline: string;
   /** Integer part of the price. */
   price: number;
@@ -32,10 +33,17 @@ export type Plan = {
   /** Billing period shown under the price. */
   period: string;
   screens: number;
+  /** One line explaining who the plan is for. */
+  bestFor: string;
   /** Renders the plan as the visually promoted tier. */
   featured?: boolean;
   /** Short badge shown above a featured plan. */
   badge?: string;
+};
+
+export type Step = {
+  title: string;
+  description: string;
 };
 
 export type CatalogItem = {
@@ -72,13 +80,12 @@ export type Country = {
 
 export const brand = {
   name: "Stella TV",
-  tagline: "Comprar Stella TV Online",
+  tagline: "Televisión en vivo, películas y series en un solo lugar",
   description:
-    "Cuentas oficiales de Stella TV: más de mil canales en vivo, +90 canales de deportes, películas, series y anime en HD y Full HD. Planes mensuales, trimestrales, semestrales y anuales.",
+    "Stella TV reúne más de mil canales en vivo, +90 señales deportivas, películas, series y anime en una sola aplicación Android. Se compra por distribuidor autorizado y se activa el mismo día.",
   logo: "/image/stella-tv.1edb4e2f.png",
   logoCompact: "/image/logo.8c7d33ac.png",
-  copyright:
-    "Copyright © 2025 Stella TV Streaming Media, All rights reserved.",
+  legalName: "Stella TV",
 } as const;
 
 export const downloads = {
@@ -94,20 +101,20 @@ export const siteUrl = "https://www.stellatv.lat";
  * different question: what a person typing into Google needs to read to click.
  */
 export const seo = {
-  title: "Stella TV Oficial | Comprar cuenta y planes 2026",
+  title: "Stella TV: precios, planes y cómo comprar tu cuenta",
   description:
-    "Compra tu cuenta Stella TV oficial: +1000 canales en vivo, +90 de deportes, películas y series en HD. Planes desde $8 con activación inmediata.",
+    "Compara los planes de Stella TV desde $8, revisa qué dispositivos son compatibles y compra con un distribuidor autorizado de tu país. Activación el mismo día.",
   keywords: [
     "stella tv",
     "comprar stella tv",
-    "stella tv oficial",
     "planes stella tv",
     "precios stella tv",
     "cuenta stella tv",
     "stella tv apk",
+    "stella tv android",
     "stella tv 2026",
+    "distribuidores stella tv",
     "canales en vivo",
-    "iptv latino",
   ],
   /** 960x540 — above the 600x315 minimum for large social cards. */
   ogImage: "/image/main-banner-bg.jpg",
@@ -117,62 +124,66 @@ export const seo = {
 
 export const navLinks: NavLink[] = [
   { label: "Planes", href: "/#planes" },
-  { label: "Descargar", href: "/#descargar" },
+  { label: "Cómo comprar", href: "/#como-comprar" },
+  { label: "Dispositivos", href: "/#descargar" },
   { label: "Contenido", href: "/#contenido" },
-  { label: "Distribuidores", href: "/#distribuidores" },
-  { label: "Dudas", href: "/#faqs" },
+  { label: "Preguntas", href: "/#faqs" },
 ];
 
 export const hero = {
-  eyebrow: "Web oficial de Stella TV",
+  eyebrow: "Distribuidores autorizados",
   title: brand.name,
-  subtitle: "Comprar Stella TV Online",
+  subtitle: "Toda la televisión en una sola app",
   description:
-    "Los mejores planes con precios económicos, ofertas y promociones. Canales en vivo, películas, series y mucho deporte al comprar Stella TV Oficial.",
-  primaryCta: { label: "Ver planes", href: "/#planes" },
-  secondaryCta: { label: "Ser revendedor", href: "/stellatv-reseller" },
+    "Canales en vivo, deportes, películas, series y anime desde tu celular, tu smart TV o tu TV Box. Eliges el plan, escribes al distribuidor de tu país y recibes tus datos de acceso el mismo día.",
+  primaryCta: { label: "Ver precios", href: "/#planes" },
+  secondaryCta: { label: "Cómo comprar", href: "/#como-comprar" },
   stats: [
     { value: "+1000", label: "Canales en vivo" },
-    { value: "+90", label: "Canales de deportes" },
-    { value: "4K", label: "HD, Full HD y 4K" },
-    { value: "24/7", label: "Soporte al cliente" },
+    { value: "+90", label: "Señales de deportes" },
+    { value: "4", label: "Pantallas a la vez" },
+    { value: "10", label: "Países con distribuidor" },
   ],
 } as const;
 
 export const devices: DeviceLink[] = [
   {
-    name: "Celular",
-    description: "Android y tablets. Instala el APK e ingresa con tus datos.",
+    name: "Celular y tablet",
+    description:
+      "Descarga el APK en cualquier Android 5 o superior, ingresa usuario y contraseña, y listo.",
     href: downloads.mobile,
     icon: "smartphone",
   },
   {
-    name: "Smart TV",
-    description: "Televisores con sistema Android y Google TV.",
+    name: "Smart TV Android",
+    description:
+      "Para televisores con Android TV o Google TV integrado. Se instala directo desde el archivo.",
     href: downloads.tv,
     icon: "tv",
   },
   {
-    name: "TV Box / Fire TV",
-    description: "TV Box, Fire TV Stick y Chromecast de 4ta generación.",
+    name: "TV Box y Fire TV",
+    description:
+      "TV Box, Fire TV Stick y Chromecast de 4ta generación en adelante usan la misma versión de TV.",
     href: downloads.tv,
     icon: "box",
   },
   {
-    name: "PC / Mac",
-    description: "Con un emulador de Android en Windows o macOS.",
+    name: "PC y Mac",
+    description:
+      "Funciona a través de un emulador de Android como BlueStacks. No existe versión nativa de escritorio.",
     href: downloads.mobile,
     icon: "monitor",
   },
 ];
 
-/** Features shared by every plan, in the order the live site lists them. */
+/** Features shared by every plan. */
 export const planFeatures = [
-  "+90 canales de deportes",
-  "Películas, series y animes",
-  "Contenido Kids",
-  "Contenido +18 adultos",
-  "Compatible con Android",
+  "+1000 canales en vivo",
+  "+90 señales deportivas",
+  "Películas, series y anime",
+  "Sección infantil",
+  "Canales +18 con control parental",
 ] as const;
 
 export const plans: Plan[] = [
@@ -185,6 +196,7 @@ export const plans: Plan[] = [
     currency: "USD",
     period: "1 mes",
     screens: 3,
+    bestFor: "Para probar el servicio completo antes de comprometerte.",
   },
   {
     id: "trimestral",
@@ -195,6 +207,7 @@ export const plans: Plan[] = [
     currency: "USD",
     period: "3 meses",
     screens: 3,
+    bestFor: "Para una temporada deportiva sin renovar cada mes.",
   },
   {
     id: "semestral",
@@ -206,6 +219,7 @@ export const plans: Plan[] = [
     period: "6 + 1 meses",
     screens: 4,
     badge: "1 mes de regalo",
+    bestFor: "Medio año pagando el equivalente a $7 por mes.",
   },
   {
     id: "anual",
@@ -218,56 +232,75 @@ export const plans: Plan[] = [
     screens: 4,
     featured: true,
     badge: "2 meses de regalo",
+    bestFor: "El precio por mes más bajo: 14 meses por el valor de 12.",
+  },
+];
+
+export const steps: Step[] = [
+  {
+    title: "Elige tu plan",
+    description:
+      "Compara duración y pantallas simultáneas. Los planes largos incluyen meses de regalo y bajan el costo mensual.",
+  },
+  {
+    title: "Escribe al distribuidor de tu país",
+    description:
+      "Cada distribuidor maneja los medios de pago locales: transferencia, billeteras digitales, tarjeta o cripto. El chat de WhatsApp se abre con tu consulta ya escrita.",
+  },
+  {
+    title: "Recibe tus datos y descarga la app",
+    description:
+      "El usuario y la contraseña llegan por correo el mismo día. Instalas el APK en tu dispositivo, inicias sesión y empiezas a ver.",
   },
 ];
 
 export const catalog: CatalogItem[] = [
   {
-    title: "Series de TV",
+    title: "Series y novelas",
     description:
-      "Las series más populares del momento en la mejor calidad, con temporadas completas disponibles.",
+      "Temporadas completas de estrenos y clásicos, con audio latino y subtitulado, ordenadas por género para que no pierdas tiempo buscando.",
     image: "/image/flujo-tv-contenido-300x188.a2a92076.jpg",
   },
   {
     title: "Películas",
     description:
-      "Las mejores películas de todos los tiempos junto a los estrenos más recientes, con gran calidad de imagen y audio.",
+      "Catálogo bajo demanda que se actualiza con los estrenos recientes, además del cine que ya conoces, en HD y Full HD.",
     image: "/image/flujo-tv-para-ninos-control-300x188.b96ae23f.jpg",
   },
   {
-    title: "Deportes",
+    title: "Deportes en vivo",
     description:
-      "Más de 90 canales deportivos para disfrutar desde España, México, Ecuador, Chile, Bolivia y otros países.",
+      "Más de 90 señales deportivas de España y Latinoamérica: fútbol de liga, torneos internacionales, motor, boxeo y más.",
     image: "/image/app-flujo-tv-descargar-300x188.c15ea7f2.jpg",
   },
   {
-    title: "Zona Kids",
+    title: "Infantil",
     description:
-      "Contenido premium para toda la familia, con una extensa biblioteca de películas, series y dibujos animados.",
+      "Una sección aparte con dibujos animados, series y películas para los más chicos, separada del resto del catálogo.",
     image: "/image/foto-de-series-flujo-tv-300x188.be38f99f.jpg",
   },
 ];
 
 export const spotlights: Spotlight[] = [
   {
-    eyebrow: "Canales HOT",
-    title: "Contenido para adultos HD (+18)",
+    eyebrow: "Deportes",
+    title: "El partido, en vivo y sin recargas",
     description:
-      "Una amplia selección de canales para adultos (+18). Además puedes configurar un control parental con la clave que elijas para restringir el acceso, así solo tú puedes verlo.",
-    image: "/image/aplicacion-flujo-tv.7df5cfc3.png",
-  },
-  {
-    eyebrow: "Eventos deportivos",
-    title: "Viva el fútbol en directo aquí",
-    description:
-      "Todos los canales latinos y españoles para disfrutar de distintas ligas de fútbol y otros deportes, con múltiples opciones de visualización en HD y Full HD.",
+      "Las señales deportivas latinas y españolas están agrupadas en su propia categoría, con varias opciones por evento. Si una se satura, cambias a otra sin perder el partido.",
     image: "/image/stellatv-app-gratis-para-celulares.184064c5.png",
   },
   {
-    eyebrow: "Cine en casa",
-    title: "Películas y series en estreno",
+    eyebrow: "Control parental",
+    title: "Tú decides qué se ve en tu casa",
     description:
-      "No hace falta ir al cine: en Stella TV encuentras las películas y series más recientes de distintas plataformas de streaming.",
+      "Los canales para adultos (+18) se bloquean con una clave que eliges al configurar la aplicación. Sin esa clave, esa categoría no aparece en el menú.",
+    image: "/image/aplicacion-flujo-tv.7df5cfc3.png",
+  },
+  {
+    eyebrow: "Multipantalla",
+    title: "Hasta 4 dispositivos al mismo tiempo",
+    description:
+      "Una misma cuenta funciona en el televisor del living, el celular de la oficina y la tablet de los chicos a la vez. No hace falta que estén en la misma casa ni en la misma red.",
     image: "/image/flujo-tv-apk-android.07056ab1.png",
   },
 ];
@@ -368,70 +401,96 @@ export function distributorWhatsapp(
 
 export const faqs: FaqItem[] = [
   {
-    question: "¿Qué es Stella TV y para qué sirve?",
+    question: "¿Qué es Stella TV?",
     answer:
-      "Stella TV es una aplicación de suscripción que permite acceder a más de mil canales de televisión en vivo. Además ofrece películas, series, anime y contenido para adultos (+18). El servicio está disponible en celulares y en smart TVs con sistema Android.",
+      "Es una aplicación de suscripción para dispositivos Android que reúne televisión en vivo y contenido bajo demanda en un mismo lugar: más de mil canales, más de 90 señales deportivas, películas, series, anime, una sección infantil y canales para adultos. Se paga por período (1, 3, 6 o 12 meses) y no depende de la operadora de cable de tu zona.",
   },
   {
-    question: "¿Qué dispositivos son compatibles con Stella TV?",
+    question: "¿Cómo compro una cuenta y cuánto tarda en activarse?",
     answer:
-      "Por ahora la aplicación es compatible únicamente con dispositivos Android: celulares, tabletas, Fire TV Stick, smart TVs con Android, TV Box, Chromecast de 4ta generación y emuladores de Android para PC con Windows o macOS.",
+      "Eliges el plan, abres el chat del distribuidor de tu país desde esta página y coordinas el pago con los medios que ese distribuidor maneja. Una vez confirmado, el usuario y la contraseña llegan a tu correo el mismo día. No hay formulario ni pasarela intermedia: hablas directo con la persona que activa tu cuenta.",
   },
   {
-    question: "¿En cuántas pantallas se puede ver?",
+    question: "¿Cuánto cuesta Stella TV?",
     answer:
-      "Los planes mensual y trimestral incluyen 3 pantallas simultáneas; los planes semestral y anual, 4. Puedes usarlas en la misma casa o en lugares distintos, con la misma o diferente IP.",
+      "El plan mensual cuesta 8 dólares. El trimestral, 23,99. El semestral, 48,99 e incluye un mes adicional de regalo. El anual, 86,99 con dos meses de regalo, lo que deja el costo mensual más bajo de los cuatro. Los precios son los mismos para todos los países; lo que cambia es el medio de pago local de cada distribuidor.",
   },
   {
-    question: "¿Cómo instalar Stella TV en una PC o Mac?",
+    question: "¿En cuántos dispositivos puedo ver al mismo tiempo?",
     answer:
-      "La instalación solo es posible en computadoras con un emulador de Android. Sin ese emulador no se puede instalar la aplicación de Stella TV.",
+      "Los planes mensual y trimestral permiten 3 reproducciones simultáneas; el semestral y el anual, 4. Las pantallas no tienen que estar en la misma casa ni en la misma red: pueden ser direcciones IP distintas, en ciudades distintas. Registrar dispositivos no consume el límite, solo las reproducciones activas.",
   },
   {
-    question: "¿Brindan un demo de prueba?",
+    question: "¿Qué dispositivos son compatibles?",
     answer:
-      "Por el momento no hay demos. Antes se daban pruebas de 6 horas, pero no alcanzaban para probar todo el servicio (canales, películas, series, anime). Por eso recomendamos comprar 1 mes y probarlo completo.",
+      "Todo lo que corra Android: celulares, tablets, televisores con Android TV o Google TV, TV Box, Fire TV Stick y Chromecast de 4ta generación en adelante. En computadoras funciona a través de un emulador de Android. Hay dos archivos de instalación distintos, uno pensado para celular y otro para televisor.",
   },
   {
-    question: "¿Se puede instalar en un iPhone?",
+    question: "¿Funciona en iPhone o iPad?",
     answer:
-      "No. La aplicación solo puede instalarse en dispositivos móviles con Android. La lista IPTV que funcionaba en iOS está deshabilitada, así que no es posible ver el contenido en iOS.",
+      "No. La aplicación es exclusivamente para Android y la lista IPTV que antes permitía verlo en iOS ya no está habilitada. Si tu único dispositivo es un iPhone, el servicio no te va a servir. Una alternativa es usar un TV Box o Fire TV Stick conectado al televisor.",
   },
   {
-    question: "¿Se puede ver en un TV Samsung o LG?",
+    question: "¿Sirve en un televisor Samsung o LG?",
     answer:
-      "Los televisores Samsung o LG no usan sistema operativo Android, por lo que no se puede instalar la aplicación. En esos casos recomendamos un TV Box o un Fire TV Stick para adaptarlo a tu smart TV.",
+      "No directamente, porque esos televisores usan Tizen y webOS, no Android, y no admiten la instalación del archivo. La solución práctica es conectar un TV Box o un Fire TV Stick por HDMI: el televisor pasa a ser solo la pantalla y la aplicación corre en ese dispositivo.",
+  },
+  {
+    question: "¿Hay una prueba gratuita?",
+    answer:
+      "No ofrecemos demos. Las pruebas de pocas horas que existían antes no alcanzaban para recorrer el catálogo real, y terminaban generando más dudas que respuestas. Si quieres evaluar el servicio, el camino honesto es el plan de un mes: cuesta 8 dólares y te da acceso a exactamente lo mismo que los planes largos.",
+  },
+  {
+    question: "¿Qué velocidad de internet necesito?",
+    answer:
+      "Como referencia general para streaming, con 5 Mbps estables se ve bien en HD y a partir de 15 o 20 Mbps tienes margen cómodo para Full HD y varias pantallas a la vez. Más que la velocidad máxima contratada, lo que importa es la estabilidad de la conexión, sobre todo por WiFi y en horario pico.",
+  },
+  {
+    question: "¿Cómo controlo lo que ven los niños?",
+    answer:
+      "Al configurar la aplicación defines una clave para la categoría de adultos (+18). Sin esa clave, esos canales no se muestran en el menú. Además hay una sección infantil separada, con dibujos animados y películas familiares, para que los chicos naveguen sin cruzarse con el resto del catálogo.",
+  },
+  {
+    question: "¿Cómo renuevo cuando se vence mi cuenta?",
+    answer:
+      "Le escribes al mismo distribuidor con el que compraste y le pides la renovación del período que quieras. La cuenta mantiene el usuario y la contraseña de siempre, así que no hay que reinstalar la aplicación ni reconfigurar los dispositivos: se extiende la fecha de vencimiento y listo.",
+  },
+  {
+    question: "¿Qué formas de pago se aceptan?",
+    answer:
+      "Depende del país, porque cada distribuidor trabaja con los medios de su plaza: transferencias y depósitos bancarios, billeteras digitales, tarjetas de crédito y débito, y criptomonedas en varios casos. Al abrir el chat, el distribuidor te confirma qué opciones tiene disponibles en ese momento.",
   },
 ];
 
 export const footer = {
   description:
-    "Somos Stella TV Oficial, el lugar donde puedes adquirir una cuenta premium para disfrutar del mejor entretenimiento en línea. ¡Ofrecemos los mejores planes y promociones!",
+    "Vendemos y activamos cuentas de Stella TV a través de una red de distribuidores autorizados en diez países. Aquí encuentras los precios actualizados, los requisitos de instalación y el contacto directo de tu zona.",
   columns: [
     {
-      title: "Ofrecemos",
+      title: "Contenido",
       links: [
         { label: "Canales en vivo", href: "/#contenido" },
-        { label: "Películas HD", href: "/#contenido" },
-        { label: "Series de TV", href: "/#contenido" },
-        { label: "Deportes en vivo", href: "/#contenido" },
-        { label: "Canales de adultos", href: "/#contenido" },
+        { label: "Películas", href: "/#contenido" },
+        { label: "Series y novelas", href: "/#contenido" },
+        { label: "Deportes", href: "/#contenido" },
+        { label: "Infantil", href: "/#contenido" },
       ],
     },
     {
-      title: "Instalar en",
+      title: "Instalación",
       links: [
-        { label: "Celulares", href: "/#descargar" },
-        { label: "Smart TV", href: "/#descargar" },
+        { label: "Celular y tablet", href: "/#descargar" },
+        { label: "Smart TV Android", href: "/#descargar" },
         { label: "TV Box", href: "/#descargar" },
-        { label: "Fire Stick", href: "/#descargar" },
-        { label: "PC / Mac", href: "/#descargar" },
+        { label: "Fire TV Stick", href: "/#descargar" },
+        { label: "PC y Mac", href: "/#descargar" },
       ],
     },
     {
-      title: "Stella TV",
+      title: "Comprar",
       links: [
-        { label: "Planes", href: "/#planes" },
+        { label: "Precios y planes", href: "/#planes" },
+        { label: "Cómo comprar", href: "/#como-comprar" },
         { label: "Distribuidores", href: "/#distribuidores" },
         { label: "Ser revendedor", href: "/stellatv-reseller" },
         { label: "Preguntas frecuentes", href: "/#faqs" },

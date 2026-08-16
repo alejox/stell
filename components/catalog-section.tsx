@@ -6,10 +6,10 @@ export function CatalogSection() {
   return (
     <section id="contenido" className="section-container py-20 sm:py-28">
       <SectionHeading
-        eyebrow="Stella TV oficial"
-        title="¿Qué ofrece"
-        highlight="Stella TV?"
-        description="Canales en vivo, películas, series, anime y deportes en una sola aplicación, con calidad HD y Full HD."
+        eyebrow="Contenido"
+        title="Qué vas a encontrar"
+        highlight="dentro de la app"
+        description="El catálogo mezcla televisión en vivo y contenido bajo demanda, ordenado por categorías para que llegues rápido a lo que buscas."
       />
 
       <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

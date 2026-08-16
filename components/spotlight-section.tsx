@@ -51,8 +51,8 @@ export function SpotlightSection() {
                 {spotlight.description}
               </p>
 
-              <CtaLink href="#planes" className="mt-2">
-                Contratar
+              <CtaLink href="/#planes" className="mt-2">
+                Ver precios
               </CtaLink>
             </div>
           </article>

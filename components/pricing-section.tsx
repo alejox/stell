@@ -36,7 +36,11 @@ function PlanCard({ plan }: { plan: Plan }) {
           {plan.currency} · {plan.period}
         </p>
 
-        <ul className="mt-8 flex w-full flex-col gap-3 text-left">
+        <p className="mt-5 border-t border-white/5 pt-5 text-sm leading-relaxed text-white/60">
+          {plan.bestFor}
+        </p>
+
+        <ul className="mt-6 flex w-full flex-col gap-3 text-left">
           {features.map((feature) => (
             <li
               key={feature}
@@ -80,9 +84,9 @@ export function PricingSection() {
       <div className="section-container">
         <SectionHeading
           eyebrow="Planes"
-          title="Precios de Stella TV"
-          highlight="2026"
-          description="Elige el plan que quieras y realiza el pago con un distribuidor autorizado. Tus datos de acceso se envían por correo electrónico."
+          title="Precios y planes de"
+          highlight="Stella TV"
+          description="Los cuatro planes dan acceso al mismo catálogo completo. Lo que cambia es la duración, los meses de regalo y cuántas pantallas puedes usar al mismo tiempo."
         />
 
         <ul className="mt-20 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -92,8 +96,8 @@ export function PricingSection() {
         </ul>
 
         <p className="mt-12 text-center text-sm text-white/40">
-          Estos precios están disponibles para todos los países. Pagos 100%
-          seguros y rápidos.
+          Los precios son iguales en todos los países. Lo que cambia es el medio de
+          pago que maneja cada distribuidor.
         </p>
       </div>
     </section>
