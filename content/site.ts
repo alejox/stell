@@ -351,6 +351,14 @@ export const distributors: Record<string, Distributor> = {
     name: "Ivan",
     whatsapp: "https://wa.me/593983013302",
   },
+    accesoriosmix:{
+    name:"Accesorios Mix",
+    whatsapp: "https://wa.me/593969380656",
+  },
+  javiertech:{
+    name:"JavierTech",
+    whatsapp: "https://wa.me/593967110242",
+  }
 };
 
 export const countries: Country[] = [
@@ -362,7 +370,7 @@ export const countries: Country[] = [
   {
     name: "Ecuador",
     flag: "/flags/Ecuador-SVG.svg",
-    distributors: ["drSystemSolutions", "ivan"],
+    distributors: ["accesoriosmix","javiertech","drSystemSolutions", "ivan"],
   },
   {
     name: "Venezuela",
